@@ -14,7 +14,6 @@ import android.widget.CheckBox;
 public class MainActivity extends AppCompatActivity {
     private MediaPlayer openSong;
     private CheckBox checkSensors;
-    private Button topScores;
     private int isSensorsChecked = 0;
 
     @Override
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button start = findViewById(R.id.startBtn);
         Button startFiveLanes = findViewById(R.id.fiveLanesBtn);
-        topScores = findViewById(R.id.highScores);
+        Button topScores = findViewById(R.id.highScores);
         checkSensors = findViewById(R.id.sensorOrBtn);
 
         openSong = MediaPlayer.create(MainActivity.this, R.raw.start_music);
@@ -64,21 +63,20 @@ public class MainActivity extends AppCompatActivity {
                 openSong.release();
                 Intent intent = new Intent(v.getContext(), FiveLanes.class);
                 intent.putExtra(Constants.KEY_IS_SENSOR,isSensorsChecked);
-                Log.d("vvvSensorsKey","is sensor activated WELCOME: " + isSensorsChecked);
                 v.getContext().startActivity(intent);
             }
         });
     }
     //if user press back in the welcome screen
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event){
-        if(keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0){
-            finish();
-            System.exit(0);
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event){
+//        if(keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0){
+//            finish();
+//            System.exit(0);
+//            return true;
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
 
 }
 

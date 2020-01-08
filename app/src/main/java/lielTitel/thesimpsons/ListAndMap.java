@@ -30,17 +30,13 @@ public class ListAndMap extends FragmentActivity implements OnMapReadyCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_and_map);
 
-        Log.d("vvvListAndMap", "onCreate");
-
         pref = new MySharedPreferences(this);
         scoresScreen = new ScoresScreen();
+
         // connect the fragment to the map
         scoresScreen.setCallback(myCallback);
 
-//        json = getIntent().getStringExtra(Constants.KEY_JSON);
         json = pref.getString(Constants.PREFS_PERSON_LIST, "");
-
-        Log.d("vvvListAndMap", "json from GameOver: " + json);
 
         //begin Transaction
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -58,7 +54,7 @@ public class ListAndMap extends FragmentActivity implements OnMapReadyCallback {
         this.googleMap = googleMap;
 
         // Add a marker in telAviv and move the camera
-        LatLng telAviv = new LatLng(34.777028, 32.065519);
+        LatLng telAviv = new LatLng(32.065519, 34.777028);
         //need to change latlng
         this.googleMap.addMarker(new MarkerOptions().position(telAviv).title("Marker in Rothschild Blv"));
         this.googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(telAviv, 8f));

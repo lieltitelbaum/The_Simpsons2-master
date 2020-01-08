@@ -111,19 +111,25 @@
             android:id="@+id/ned1"
             android:layout_width="61dp"
             android:layout_height="76dp"
-            android:src="@drawable/ned"></ImageView>
+            android:src="@drawable/ned">
+
+        </ImageView>
 
         <ImageView
             android:id="@+id/ned2"
             android:layout_width="61dp"
             android:layout_height="76dp"
-            android:src="@drawable/ned"></ImageView>
+            android:src="@drawable/ned">
+
+        </ImageView>
 
         <ImageView
             android:id="@+id/ned3"
             android:layout_width="61dp"
             android:layout_height="76dp"
-            android:src="@drawable/ned"></ImageView>
+            android:src="@drawable/ned">
+
+        </ImageView>
 
         <ImageView
             android:id="@+id/ned4"
@@ -146,28 +152,36 @@
             android:layout_width="61dp"
             android:layout_height="76dp"
             android:src="@drawable/donut"
-            android:visibility="visible"></ImageView>
+            android:visibility="visible">
+
+        </ImageView>
 
         <ImageView
             android:id="@+id/donut2"
             android:layout_width="61dp"
             android:layout_height="76dp"
             android:src="@drawable/donut"
-            android:visibility="visible"></ImageView>
+            android:visibility="visible">
+
+        </ImageView>
 
         <ImageView
             android:id="@+id/donut3"
             android:layout_width="61dp"
             android:layout_height="76dp"
             android:src="@drawable/donut"
-            android:visibility="invisible"></ImageView>
+            android:visibility="invisible">
+
+        </ImageView>
 
         <ImageView
             android:id="@+id/donut4"
             android:layout_width="61dp"
             android:layout_height="76dp"
             android:src="@drawable/donut"
-            android:visibility="invisible"></ImageView>
+            android:visibility="invisible">
+
+        </ImageView>
 
         <ImageView
             android:id="@+id/donut5"

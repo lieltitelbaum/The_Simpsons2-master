@@ -10,7 +10,7 @@ public class MySharedPreferences {
     private SharedPreferences prefs;
 
     public MySharedPreferences(Context context) {
-        prefs = context.getSharedPreferences("MyPref", MODE_PRIVATE);
+        prefs = context.getSharedPreferences(Constants.KEY_SHARED_PREF, MODE_PRIVATE);
     }
 
     public int getInt(String key, int defaultValue) {

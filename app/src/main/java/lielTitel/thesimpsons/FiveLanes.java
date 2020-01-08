@@ -155,6 +155,7 @@ public class FiveLanes extends AppCompatActivity{
                 if (startPause) //if user click again and replay the game
                 {
                     pauseBtn.setBackgroundResource(R.drawable.pause1_icon);
+                    sensors.registerListener(sensorEventListener, movementSensor,SensorManager.SENSOR_DELAY_NORMAL);
                     countScore();
                     startMovement();
                     startMoveDonuts();
@@ -163,6 +164,7 @@ public class FiveLanes extends AppCompatActivity{
                     pauseLeft = false;
                 } else {
                     pauseBtn.setBackgroundResource(R.drawable.play_icon);
+                    sensors.unregisterListener(sensorEventListener, movementSensor);
                     timer.cancel();
                     moveDonuts.cancel();
                     scoreThread.cancel();
