@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">The Simpsons</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="scoreLabel">score: </string>
+    <string name="welcome">WELCOME</string>
+    <string name="threeLanes">start 3 lanes</string>
+    <string name="fiveLanes">start 5 lanes</string>
+    <string name="gameOver">GAME OVER</string>
+    <string name="nameHint">Please enter your full name</string>
+    <string name="idHint">Please enter your ID</string>
+    <string name="submitLbl">SUBMIT</string>
+    <string name="replayLbl">REPLAY</string>
+    <string name="sensorOrBtn">SENSORS</string>
+</resources>

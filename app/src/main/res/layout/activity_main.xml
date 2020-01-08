@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/homeLayout"
+    android:background="@drawable/donutss"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/welcome"
+        android:textColor="#006B8E"
+        android:textSize="40sp"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="70dp"
+        android:textStyle="bold">
+    </TextView>
+
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/welcome"
+        android:layout_marginTop="20dp"
+        android:background="#FDE9EE"
+        android:text="@string/threeLanes"
+        android:textSize="15sp">
+
+    </Button>
+
+    <Button
+        android:id="@+id/fiveLanesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/startBtn"
+        android:layout_marginTop="20dp"
+        android:background="#FDE9EE"
+        android:text="@string/fiveLanes"
+        android:textSize="15sp">
+    </Button>
+
+    <CheckBox
+        android:id="@+id/sensorOrBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/sensorOrBtn"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/fiveLanesBtn"
+        android:background="@color/colorFontWelcomeScreen">
+    </CheckBox>
+
+    <Button
+        android:id="@+id/highScores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/sensorOrBtn"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/high_scors_icn"
+        android:textStyle="bold">
+
+    </Button>
+</RelativeLayout>

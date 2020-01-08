@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gameOver"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homer_donuts"
+    android:orientation="vertical"
+    tools:context=".GameOver">
+
+
+    <TextView
+        android:id="@+id/gameOverTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amaranth_bold"
+        android:gravity="top|center"
+        android:text="@string/gameOver"
+        android:textColor="#006B8E"
+        android:textSize="55sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/scoreGameOver"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/gameOverTxt"
+        android:gravity="center"
+        android:fontFamily="@font/amaranth_bold"
+        android:text="@string/scoreLabel"
+        android:textColor="#006B8E"
+        android:textSize="25sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+
+    <EditText
+        android:id="@+id/personName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:fontFamily="@font/amaranth_bold"
+        android:hint="@string/nameHint"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/scoreGameOver">
+    </EditText>
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/personName"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/amaranth_bold"
+        android:background="#006B8E"
+        android:textColor="#FFFF"
+        android:text="@string/submitLbl"
+        android:textStyle="bold">
+
+    </Button>
+    <Button
+        android:id="@+id/replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/send"
+        android:layout_marginTop="15dp"
+        android:background="#006B8E"
+        android:textColor="#FFFF"
+        android:fontFamily="@font/amaranth_bold"
+        android:onClick="startGame"
+        android:text="@string/replayLbl"
+        android:textStyle="bold">
+    </Button>
+
+    <Button
+        android:id="@+id/highScores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/replay"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/high_scors_icn"
+        android:textStyle="bold">
+    </Button>
+
+</RelativeLayout>
