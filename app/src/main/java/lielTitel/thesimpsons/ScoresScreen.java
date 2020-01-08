@@ -46,26 +46,17 @@ public class ScoresScreen extends Fragment  {
         if (view == null) {
             view = inflater.inflate(R.layout.activity_scores_screen, container, false);
         }
-        Log.d("vvvListVIEW", "View: " + view);
-        Log.d("vvvFragmentList", "onCreateView");
-
-//        pref = new MySharedPreferences(view.getContext());
-//        json = pref.getString(Constants.PREFS_PERSON_LIST, "");
-        Log.d("vvvBeforePrefs", "" + json);
-
         //new part
         pref = new MySharedPreferences(view.getContext());
         json = pref.getString(Constants.PREFS_PERSON_LIST, "");
 
-        Log.d("vvvAfterPrefs", "json: " + json);
+
         if (json.compareTo("") == 0) {
             personList = new PersonList();
         } else {
             personList = new Gson().fromJson(json, PersonList.class);
         }
-        Log.d("vvvScoresScreen", "list size: " + personList.getPersonList().size());
 
-//        loadData(view);
         RecyclerView recyclerView = view.findViewById(R.id.rvPersons);
         recyclerView.setLayoutManager(new LinearLayoutManager(inflater.getContext()));
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(personList.getPersonList(), inflater.getContext());
@@ -73,7 +64,6 @@ public class ScoresScreen extends Fragment  {
         recyclerView.setAdapter(adapter);
 
         return view;
-//        return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     public RecyclerViewAdapter.ItemClickListener itemClickListener = new RecyclerViewAdapter.ItemClickListener() {
@@ -82,7 +72,6 @@ public class ScoresScreen extends Fragment  {
             double lat = personList.getPersonList().get(position).getLatitude();
             double longi =personList.getPersonList().get(position).getLongitude();
             setLocation(new LatLng(lat, longi));
-            Log.d("vvvClick", "clicked " + position);
         }
     };
 
@@ -92,24 +81,5 @@ public class ScoresScreen extends Fragment  {
 
     public void setLocation(LatLng location) {
         callBackList.setMapLocation(location);
-    }
-
-    private void loadData(View view)
-    {
-//        sharedPreferences = view.getContext().getSharedPreferences(SHARED_PREF, Context.MODE_PRIVATE);
-//        Gson gson = new Gson();
-//        String json = sharedPreferences.getString(STRING_EDITOR_SHARED,"");
-
-
-        Log.d("vvvBeforePrefs", "" +json);
-        if (json.compareTo("") == 0)
-        {
-            personList = new PersonList();
-        }
-        else {
-            personList = new Gson().fromJson(json, PersonList.class);
-        }
-
-        Log.d("vvvAfter", "" +json);
     }
 }

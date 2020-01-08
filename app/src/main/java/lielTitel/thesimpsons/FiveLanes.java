@@ -231,6 +231,14 @@ public class FiveLanes extends AppCompatActivity{
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        timer.cancel();
+        moveDonuts.cancel();
+        scoreThread.cancel();
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         if (movementSensor != null)

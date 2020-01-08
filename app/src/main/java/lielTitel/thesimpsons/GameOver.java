@@ -88,17 +88,17 @@ public class GameOver extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            name = personName.getText().toString();
+                name = personName.getText().toString();
 
-            person.setName(name);
-            personList.addPerson(person);
+                person.setName(name);
+                personList.addPerson(person);
 
-            replay.setVisibility(View.VISIBLE);
-            scores.setVisibility(View.VISIBLE);
-            personName.setVisibility(View.INVISIBLE);
-            submit.setVisibility(View.INVISIBLE);
+                replay.setVisibility(View.VISIBLE);
+                scores.setVisibility(View.VISIBLE);
+                personName.setVisibility(View.INVISIBLE);
+                submit.setVisibility(View.INVISIBLE);
 
-            saveData();
+                saveData();
             }
         });
 
@@ -137,7 +137,7 @@ public class GameOver extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-   }
+    }
 
     private void saveData() {
         json = new Gson().toJson(personList);

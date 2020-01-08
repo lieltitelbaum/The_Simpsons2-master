@@ -10,5 +10,6 @@
     <string name="idHint">Please enter your ID</string>
     <string name="submitLbl">SUBMIT</string>
     <string name="replayLbl">REPLAY</string>
+    <string name="scoresLbl">TOP 10</string>
     <string name="sensorOrBtn">SENSORS</string>
 </resources>
