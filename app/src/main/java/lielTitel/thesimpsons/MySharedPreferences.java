@@ -34,7 +34,7 @@ public class MySharedPreferences {
     }
 
     public void removeKey(String key) {
-        prefs.edit().remove(key);
+        prefs.edit().remove(key).apply();
     }
 
 }

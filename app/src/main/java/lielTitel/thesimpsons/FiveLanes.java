@@ -197,6 +197,7 @@ public class FiveLanes extends AppCompatActivity{
 
         //sensors
         sensors = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        assert sensors != null;
         movementSensor = sensors.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
     }
 
